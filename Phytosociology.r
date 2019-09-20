@@ -45,7 +45,7 @@ table_wo$AFr <- 100*(table_wo$FREQ_WO/sample.wo)
 table_wo$RFr <- 100*(table_wo$FREQ_WO/sum(table_wo$FREQ_WO))
 table_wo$ADe <- table_wo$ABUND_WO/area.wo
 table_wo$RDe <- 100*(table_wo$ABUND_WO/sum(table_wo$ABUND_WO))
-table_wo$IVI <- table_wo$RDo + table_wo$RF + table_wo$RD
+table_wo$IVI <- table_wo$RDo + table_wo$RFr + table_wo$RDe
 
 # Where, ADo = Absolute Dominance, RDo = Relative Dominance, AFr = Absolute Frequency, RFr = Relative Frequency, ADe = Absolute Density, RDe = Relative Density, IVI = Importance Value Index.
 
@@ -85,7 +85,7 @@ table$AFr <- 100*(table$FREQ/sample.bb)
 table$RFr <- 100*(table$FREQ/sum(table$FREQ))
 table$ADe <- table$ABUND/area.bb
 table$RDe <- 100*(table$ABUND/sum(table$ABUND))
-table$IVI <- table$RC + table$RF + table$RD
+table$IVI <- table$RC + table$RFr + table$RDe
 
 # Where, CV = Cover Value, RC = Relative Cover, AFr = Absolute Frequency, RFr = Relative Frequency, ADe = Absolute Density, RDe = Relative Density, IVI = Importance Value Index.
 
