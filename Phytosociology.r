@@ -58,11 +58,11 @@ write.table(table_wo, "phytosociology_woody.txt", row.names = F)
 # Before start:
 
 # 1- Your data frame must look like:
-#plot|species|abundance|cover_class|cover_percent|cover_prop|
-#   1|    sp1|        4|	        2|	       17.5|     0.175|
-#   1|   	sp2|        1|        	R|        	0.1|	   0.001|
-#   1|  	sp3|        2|	        2|	       17.5|	   0.175|
-#   1|  	sp4|        1|	        2|	       17.5|     0.175|
+# plot| species| abundance| cover_class| cover_percent| cover_prop|
+#    1|     sp1|         4|           2|          17.5|      0.175|
+#    1|     sp2|         1|           R|          00.1|      0.001|
+#    1|     sp3|         2|           2|          17.5|      0.175|
+#    1|     sp4|         1|           2|          17.5|      0.175|
 
 # Where, cover_class = cover class of Braun-Blanquet (1979), cover_percent = mean of cover in percentage based on cover class of Braun-Blanquet (1979), and cover_prop = mean of cover in proportion based on cover class of Braun-Blanquet (1979). 
 
