@@ -4,7 +4,7 @@
 ### May 19 2019                                      ##
 #######################################################
 
-# Woody sampling at line 10 and Ground sampling at line 56.
+# Woody sampling at line 10 and Braun-blanquet (ground) sampling at line 56.
 
 
 ########## WOODY SAMPLING ##########
