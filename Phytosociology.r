@@ -64,7 +64,7 @@ write.table(table_wo, "phyto_field_to_table_woody.txt", row.names = F)
 area.bb <- 10 
 sample.bb <- 10
 
-# Prepearing the data
+# Prepering the data
 abund <- tapply(df.bb$abundance, df.bb$species, function(x) sum(x))
 cover_prop <- tapply(df.bb$cover_prop, df.bb$species, function(x) sum(x))
 freq <- tapply(df.bb$plot, df.bb$species, function(x) length(unique(x)))
