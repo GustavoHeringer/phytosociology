@@ -4,7 +4,7 @@
 ### May 19 2019                                      ##
 #######################################################
 
-# Woody sampling at line 10 and Braun-Blanquet (ground) sampling at line 56.
+# Woody sampling at line 10 and Braun-Blanquet (ground) sampling at line 54.
 
 
 ########## WOODY SAMPLING ##########
@@ -17,11 +17,9 @@
 # plot| species| abundance|  cbh| height|
 #   81|    sp01|         1| 17.9|    4.0|
 #   81|    sp02|         1| 29.8|    5.0|
-#   81|    sp01|         1| 31.7|    7.5|
 #   81|    sp03|         1| 84.6|   10.8|
 #   81|    sp04|         1| 40.6|    7.5|
 #   81|    sp04|         0| 21.8|    3.9|
-#   81|    sp05|         1| 30.1|    5.1|
 
 # Where, cbh = circumference at breast height
 
@@ -59,10 +57,10 @@ write.table(table_wo, "phytosociology_woody.txt", row.names = F)
 
 # 1- Your data frame must look like:
 # plot| species| abundance| cover_class| cover_percent| cover_prop|
-#    1|     sp1|         4|           2|          17.5|      0.175|
+#    1|     sp1|         4|           2|          15.0|      0.150|
 #    1|     sp2|         1|           R|          00.1|      0.001|
-#    1|     sp3|         2|           2|          17.5|      0.175|
-#    1|     sp4|         1|           2|          17.5|      0.175|
+#    1|     sp3|         2|           2|          15.0|      0.150|
+#    1|     sp4|         8|           5|          87.5|      0.875|
 
 # Where, cover_class = cover class of Braun-Blanquet (1979), cover_percent = mean of cover in percentage based on cover class of Braun-Blanquet (1979), and cover_prop = mean of cover in proportion based on cover class of Braun-Blanquet (1979). 
 
