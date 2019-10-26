@@ -4,8 +4,7 @@
 ### May 19 2019                                      ##
 #######################################################
 
-# Woody sampling at line 10 and Braun-Blanquet (ground) sampling at line 54.
-
+# Woody sampling at line 9 and Braun-Blanquet (ground) sampling at line 52.
 
 ########## WOODY SAMPLING ##########
 
@@ -49,7 +48,6 @@ table_wo$IVI <- table_wo$RDo + table_wo$RFr + table_wo$RDe
 
 # Saving the dataframe
 write.table(table_wo, "phytosociology_woody.txt", row.names = F)
-
 
 ########## GROUND SAMPLING (or BRAUN-BLANQUET SAMPLING) ##########
 
