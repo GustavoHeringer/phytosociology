@@ -4,13 +4,11 @@
 ### May 19 2019                                      ##
 #######################################################
 
-# Woody sampling at line 9 and Braun-Blanquet (ground) sampling at line 52.
-
 ########## WOODY SAMPLING ##########
 
 # Before start:
 
-# 1- When a tree has bifurcated trunk, you must use abundance as 0 for the second, third, fourth... trunks in the same individual (like in line 6 in the example below)
+# 1- When a tree has bifurcated trunk, you must use abundance as 0 for the second, third, fourth... trunks in the same individual (like in line 19 in the example below)
 
 # 2- Your data frame must look like:
 # plot| species| abundance|  cbh| height|
@@ -47,7 +45,7 @@ table_wo$IVI <- table_wo$RDo + table_wo$RFr + table_wo$RDe
 # Where, ADo = Absolute Dominance, RDo = Relative Dominance, AFr = Absolute Frequency, RFr = Relative Frequency, ADe = Absolute Density, RDe = Relative Density, IVI = Importance Value Index.
 
 # Saving the dataframe
-write.table(table_wo, "phytosociology_woody.txt", row.names = F)
+write.table(table_wo, "phyto_field_to_table_woody.txt", row.names = F)
 
 ########## GROUND SAMPLING (or BRAUN-BLANQUET SAMPLING) ##########
 
@@ -86,4 +84,4 @@ table$IVI <- table$RC + table$RFr + table$RDe
 # Where, CV = Cover Value, RC = Relative Cover, AFr = Absolute Frequency, RFr = Relative Frequency, ADe = Absolute Density, RDe = Relative Density, IVI = Importance Value Index.
 
 # Saving the dataframe
-write.table(table, "phytosociology_braun_blanquet.txt", row.names = F)
+write.table(table, "phyto_field_to_table_braun_blanquet.txt", row.names = F)
