@@ -70,18 +70,18 @@ freq <- tapply(df.bb$plot, df.bb$species, function(x) length(unique(x)))
 abund <- tapply(df.bb$abundance, df.bb$species, function(x) sum(x))
                 
 # Creating a dataframe
-table <- data.frame(SPECIES=names(abund), COVER=cover_prop, FREQ=freq, ABUND=abund)
+table_bb <- data.frame(SPECIES=names(abund), COVER=cover_prop, FREQ=freq, ABUND=abund)
 
 # Phytosociological parameters
-table$CV <- 100*(table$COVER/area.bb)
-table$RC <- 100*(table$COVER/sum(table$COVER))
-table$AFr <- 100*(table$FREQ/sample.bb) 
-table$RFr <- 100*(table$FREQ/sum(table$FREQ))
-table$ADe <- table$ABUND/area.bb
-table$RDe <- 100*(table$ABUND/sum(table$ABUND))
-table$IVI <- table$RC + table$RFr + table$RDe
+table_bb$CV <- 100*(table_bb$COVER/area.bb)
+table_bb$RC <- 100*(table_bb$COVER/sum(table_bb$COVER))
+table_bb$AFr <- 100*(table_bb$FREQ/sample.bb) 
+table_bb$RFr <- 100*(table_bb$FREQ/sum(table_bb$FREQ))
+table_bb$ADe <- table_bb$ABUND/area.bb
+table_bb$RDe <- 100*(table_bb$ABUND/sum(table_bb$ABUND))
+table_bb$IVI <- table_bb$RC + table_bb$RFr + table_bb$RDe
 
 # Where, CV = Cover Value, RC = Relative Cover, AFr = Absolute Frequency, RFr = Relative Frequency, ADe = Absolute Density, RDe = Relative Density, IVI = Importance Value Index.
 
 # Saving the dataframe
-write.table(table, "phyto_from_field_to_table_braun_b.txt", row.names = F)
+write.table(table_bb, "phyto_from_field_to_table_braun_b.txt", row.names = F)
