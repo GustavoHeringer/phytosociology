@@ -1,5 +1,4 @@
-## Running phytosociological parameters in R:        ##
-## phytosociology from field to table                ##
+## Phytosociological parameters in R                 ##
 ### Gustavo Heringer <<gustavoheringer@hotmail.com>> ##
 ### May 19 2019                                      ##
 #######################################################
@@ -24,11 +23,13 @@
 area.wo <- 0.1 
 sample.wo <- 10
 
-# Prepearing the data
+# Prepearing the data (here cbh in centimeters is also converted to the basal area in meters)
 df.wo$basal_a <- (3.1415926*(df.wo$cbh/(2*3.1415926))^2)/10000
 basal_a_wo <- tapply(df.wo$basal_a, df.wo$species, function(x) sum(x))
 freq_wo <- tapply(df.wo$plot, df.wo$species, function(x) length(unique(x)))
 abund_wo <- tapply(df.wo$abundance, df.wo$species, function(x) sum(x))
+                   
+# If the researcher sampled dbh (diameter at breast height) instead circumference, the code line 27 must be replaced with: df.wo$basal_a <- 3.1415926*(df.wo$dbh/2)^2/10000
                    
 # Creating a dataframe
 table_wo <- data.frame(SPECIES=names(abund_wo), BASAL_A=basal_a_wo, FREQ=freq_wo, ABUND=abund_wo)
